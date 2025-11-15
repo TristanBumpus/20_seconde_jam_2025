@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://mptmwwpfesua"]
 
-[ext_resource type="PackedScene" uid="uid://qyo6r63uhndi" path="res://entities/crossair.tscn" id="1_f2ife"]
+[ext_resource type="PackedScene" uid="uid://qyo6r63uhndi" path="res://entities/player/crossair.tscn" id="1_f2ife"]
 
 [node name="world" type="Node3D"]
 
