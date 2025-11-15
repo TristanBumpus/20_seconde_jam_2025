@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 
 [autoload]
 
-global="*res://scripts/global.gd"
+global="*res://scripts/tristan_global.gd"
 
 [display]
 
@@ -36,3 +36,7 @@ folder_colors={
 "res://scenes/": "green",
 "res://scripts/": "blue"
 }
+
+[global_group]
+
+color_effects=""

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dggf5h20wduqr"]
+
+[ext_resource type="PackedScene" uid="uid://dsqw8qq526dc" path="res://entities/enemy/enemy_1.tscn" id="1_uyrrl"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="Enemy1" parent="." instance=ExtResource("1_uyrrl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.533867)

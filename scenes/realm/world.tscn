@@ -1,9 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://mptmwwpfesua"]
+[gd_scene load_steps=6 format=3 uid="uid://mptmwwpfesua"]
 
 [ext_resource type="PackedScene" uid="uid://qyo6r63uhndi" path="res://entities/player/crossair.tscn" id="1_f2ife"]
+[ext_resource type="Script" uid="uid://cidqmlgw87633" path="res://scripts/world.gd" id="1_ksk13"]
+[ext_resource type="PackedScene" uid="uid://dsqw8qq526dc" path="res://entities/enemy/enemy_1.tscn" id="2_hbu11"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_f2ife"]
+size = Vector3(100, 1, 200)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f2ife"]
+size = Vector3(100, 1, 200)
 
 [node name="world" type="Node3D"]
+script = ExtResource("1_ksk13")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="crossair" parent="CanvasLayer" instance=ExtResource("1_f2ife")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="floor" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_f2ife")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_f2ife")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.02875711, -0.098374106, 0.9947339, 0, 0.9951455, 0.0984148, -0.99958646, 0.0028301254, -0.028617509, 49.91221, 4.9381046, -1.4359246)
+
+[node name="Enemy1" parent="." instance=ExtResource("2_hbu11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.126658, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.79213, 15.532007, 0)
+omni_range = 100.0
+
+[node name="color_effects" type="OmniLight3D" parent="." groups=["color_effects"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.79213, 15.532007, 0)
+light_color = Color(0, 0, 0, 1)
+omni_range = 100.0

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsqw8qq526dc"]
+
+[ext_resource type="Script" uid="uid://bl50c8s05g0jt" path="res://scripts/enemy/tristan_enemy.gd" id="1_mkdt5"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_mkdt5"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_afwpj"]
+material = SubResource("ORMMaterial3D_mkdt5")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mkdt5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cnceg"]
+
+[node name="Enemy1" type="CharacterBody3D"]
+script = ExtResource("1_mkdt5")
+enemiy_type = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_afwpj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_mkdt5")
+
+[node name="timers" type="Node2D" parent="."]
+
+[node name="when_to_shoot" type="Timer" parent="timers"]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_cnceg")
+
+[connection signal="timeout" from="timers/when_to_shoot" to="." method="_on_when_to_shoot_timeout"]
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
