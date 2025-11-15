@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="20_seconde_jam_2025"
+run/main_scene="uid://mptmwwpfesua"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://scripts/icon.svg"
+
+[autoload]
+
+global="*res://scripts/global.gd"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor]
 

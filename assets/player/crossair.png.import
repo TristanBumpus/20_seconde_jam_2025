@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf6koty6vasyr"
-path="res://.godot/imported/icon.svg-f8c16fb690a483596e27f859561c0fa4.ctex"
+uid="uid://dcbxa6g5j67l3"
+path="res://.godot/imported/crossair.png-dabd6622d496bfdc4bda2e10a3008bb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-f8c16fb690a483596e27f859561c0fa4.ctex"]
+source_file="res://assets/player/crossair.png"
+dest_files=["res://.godot/imported/crossair.png-dabd6622d496bfdc4bda2e10a3008bb9.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

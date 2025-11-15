@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://qyo6r63uhndi"]
+
+[ext_resource type="Script" uid="uid://dm8xrfgwrdnv3" path="res://scripts/player/crossair.gd" id="1_wgga0"]
+[ext_resource type="Texture2D" uid="uid://dcbxa6g5j67l3" path="res://assets/player/crossair.png" id="2_1axfy"]
+
+[node name="crossair" type="CharacterBody2D"]
+z_index = 5
+script = ExtResource("1_wgga0")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_1axfy")

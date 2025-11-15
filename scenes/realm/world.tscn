@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://mptmwwpfesua"]
+[gd_scene load_steps=2 format=3 uid="uid://mptmwwpfesua"]
+
+[ext_resource type="PackedScene" uid="uid://qyo6r63uhndi" path="res://entities/crossair.tscn" id="1_f2ife"]
 
 [node name="world" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="crossair" parent="CanvasLayer" instance=ExtResource("1_f2ife")]
