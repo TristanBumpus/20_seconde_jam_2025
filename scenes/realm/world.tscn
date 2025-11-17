@@ -14,6 +14,7 @@ size = Vector3(100, 1, 200)
 script = ExtResource("1_ksk13")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6222372, 0)
 
 [node name="floor" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_f2ife")
@@ -23,7 +24,7 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_f2ife")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.02875711, -0.098374106, 0.9947339, 0, 0.9951455, 0.0984148, -0.99958646, 0.0028301254, -0.028617509, 49.91221, 4.9381046, -1.4359246)
+transform = Transform3D(-0.02875711, -0.098374106, 0.9947339, 0, 0.9951455, 0.0984148, -0.99958646, 0.0028301254, -0.028617509, 49.912, 0.75331163, 0)
 
 [node name="Enemy1" parent="." instance=ExtResource("2_hbu11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.126658, 0)
@@ -38,4 +39,4 @@ light_color = Color(0, 0, 0, 1)
 omni_range = 100.0
 
 [node name="gun" parent="." instance=ExtResource("3_ksk13")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 48.808987, 3.8838058, -1.9644322)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 48.809, 0, 0)

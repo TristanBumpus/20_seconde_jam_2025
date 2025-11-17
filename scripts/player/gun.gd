@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
 
-
 func _process(delta: float) -> void:
+	
+	look_at(Vector3(0, (324 - global.crossair_pos.y)/10, (576 - global.crossair_pos.x)/10))
+	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 		print("S")
 		$CanvasLayer/UI.visible = true
