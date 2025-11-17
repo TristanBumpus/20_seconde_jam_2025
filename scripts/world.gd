@@ -23,5 +23,5 @@ func _process(delta: float) -> void:
 			current_level = global.level_count
 			var l = load(levels[global.level_count])
 			var level = l.instantiate()
-			level.global_position =  $StaticBody3D.global_position
 			get_tree().current_scene.add_child(level)
+			level.global_position =  $StaticBody3D.global_position
