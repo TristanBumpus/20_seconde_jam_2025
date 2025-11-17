@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbvi8ssw324go"]
+
+[ext_resource type="Script" uid="uid://cb347ymn4jvsp" path="res://scripts/player/gun.gd" id="1_186dy"]
+[ext_resource type="PackedScene" uid="uid://cv3epakhiq7d0" path="res://assets/player/gunslamb.fbx" id="1_l54tc"]
+[ext_resource type="PackedScene" uid="uid://cvnajmpcmtfs4" path="res://scenes/UI/ui.tscn" id="3_1mtle"]
+[ext_resource type="PackedScene" uid="uid://qyo6r63uhndi" path="res://entities/player/crossair.tscn" id="4_spa2e"]
+
+[node name="gun" type="CharacterBody3D"]
+script = ExtResource("1_186dy")
+
+[node name="gunslamb" parent="." instance=ExtResource("1_l54tc")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("3_1mtle")]
+
+[node name="crossair" parent="CanvasLayer" instance=ExtResource("4_spa2e")]

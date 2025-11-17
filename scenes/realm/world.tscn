@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://mptmwwpfesua"]
 
-[ext_resource type="PackedScene" uid="uid://qyo6r63uhndi" path="res://entities/player/crossair.tscn" id="1_f2ife"]
 [ext_resource type="Script" uid="uid://cidqmlgw87633" path="res://scripts/world.gd" id="1_ksk13"]
 [ext_resource type="PackedScene" uid="uid://dsqw8qq526dc" path="res://entities/enemy/enemy_1.tscn" id="2_hbu11"]
+[ext_resource type="PackedScene" uid="uid://dbvi8ssw324go" path="res://entities/player/gun.tscn" id="3_ksk13"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f2ife"]
 size = Vector3(100, 1, 200)
@@ -12,10 +12,6 @@ size = Vector3(100, 1, 200)
 
 [node name="world" type="Node3D"]
 script = ExtResource("1_ksk13")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="crossair" parent="CanvasLayer" instance=ExtResource("1_f2ife")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -40,3 +36,6 @@ omni_range = 100.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.79213, 15.532007, 0)
 light_color = Color(0, 0, 0, 1)
 omni_range = 100.0
+
+[node name="gun" parent="." instance=ExtResource("3_ksk13")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 48.808987, 3.8838058, -1.9644322)
